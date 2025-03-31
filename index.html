@@ -1,1 +1,556 @@
-"Hello World" 
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Courier;
+	panose-1:2 7 4 9 2 2 5 2 4 4;}
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"MS Gothic";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Segoe UI Emoji";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"\@MS Gothic";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:"\@MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Cambria",serif;}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Calibri",sans-serif;
+	color:#365F91;
+	font-weight:bold;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Calibri",sans-serif;
+	color:#4F81BD;
+	font-weight:bold;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	color:#4F81BD;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+p
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+code
+	{font-family:"Courier New";}
+pre
+	{mso-style-link:"HTML Preformatted Char";
+	margin:0cm;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:"Calibri",sans-serif;
+	color:#365F91;
+	font-weight:bold;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Calibri",sans-serif;
+	color:#4F81BD;
+	font-weight:bold;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-link:"Heading 3";
+	font-family:"Calibri",sans-serif;
+	color:#4F81BD;
+	font-weight:bold;}
+span.HTMLPreformattedChar
+	{mso-style-name:"HTML Preformatted Char";
+	mso-style-link:"HTML Preformatted";
+	font-family:"Courier New";}
+.MsoChpDefault
+	{font-family:"Cambria",serif;}
+.MsoPapDefault
+	{margin-bottom:10.0pt;
+	line-height:115%;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-IN link=blue vlink=purple style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<h1><span lang=EN-US>Basic Setup of Jenkins for CI/CD</span></h1>
+
+<h2><span lang=EN-US>Introduction</span></h2>
+
+<p><span style='font-family:"Calibri",sans-serif'>Jenkins is a widely used
+open-source automation server that facilitates continuous integration and
+continuous deployment (CI/CD). This guide provides a step-by-step approach to
+installing, configuring, and troubleshooting Jenkins on a Linux-based system.</span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"Calibri",sans-serif'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><span lang=EN-US>1. Installing Jenkins</span></h2>
+
+<h3><span lang=EN-US>Prerequisites</span></h3>
+
+<p><span style='font-family:"Calibri",sans-serif'>Ensure that your system is up
+to date before installing Jenkins:</span></p>
+
+<pre><code><span style='font-family:"Calibri",sans-serif'>sudo apt update &amp;&amp; sudo apt install -y openjdk-11-jdk</span></code></pre>
+
+<h3><span lang=EN-US>Download and Install Jenkins</span></h3>
+
+<p><span style='font-family:"Calibri",sans-serif'>Execute the following
+commands to install Jenkins:</span></p>
+
+<pre><code><span style='font-family:"Calibri",sans-serif'>wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo tee /usr/share/keyrings/jenkins-keyring.asc &gt; /dev/null</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>echo &quot;deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/&quot; | sudo tee /etc/apt/sources.list.d/jenkins.list &gt; /dev/null</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>sudo apt update &amp;&amp; sudo apt install -y jenkins</span></code></pre>
+
+<p><img width=32 height=32 src="index_files/image001.png"
+alt="Jenkins Installation"></p>
+
+<h3><span lang=EN-US>Start and Enable Jenkins</span></h3>
+
+<p><span style='font-family:"Calibri",sans-serif'>Run the following commands to
+start Jenkins and enable it to launch on startup:</span></p>
+
+<pre><code><span style='font-family:"Calibri",sans-serif'>sudo systemctl start jenkins</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>sudo systemctl enable jenkins</span></code></pre>
+
+<h3><span lang=EN-US>Check Jenkins Status</span></h3>
+
+<p><span style='font-family:"Calibri",sans-serif'>To verify that Jenkins is
+running correctly:</span></p>
+
+<pre><code><span style='font-family:"Calibri",sans-serif'>sudo systemctl status jenkins</span></code></pre>
+
+<p><img width=32 height=32 src="index_files/image001.png" alt="Jenkins Running"></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"Calibri",sans-serif'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><span lang=EN-US>2. Installing Required Plugins</span></h2>
+
+<p><span style='font-family:"Calibri",sans-serif'>To fully utilize Jenkins,
+install the necessary plugins:</span></p>
+
+<p style='margin-left:36.0pt;text-indent:-18.0pt'><span style='font-family:
+"Calibri",sans-serif'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Calibri",sans-serif'>Navigate to <strong><span
+style='font-family:"Calibri",sans-serif'>Manage Jenkins &gt; Manage Plugins</span></strong></span></p>
+
+<p style='margin-left:36.0pt;text-indent:-18.0pt'><span style='font-family:
+"Calibri",sans-serif'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Calibri",sans-serif'>Install the
+following:</span></p>
+
+<p style='margin-left:72.0pt;text-indent:-18.0pt'><span style='font-size:10.0pt;
+font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><strong><span style='font-family:"Calibri",sans-serif'>Git Plugin</span></strong></p>
+
+<p style='margin-left:72.0pt;text-indent:-18.0pt'><span style='font-size:10.0pt;
+font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><strong><span style='font-family:"Calibri",sans-serif'>Pipeline
+Plugin</span></strong></p>
+
+<p style='margin-left:72.0pt;text-indent:-18.0pt'><span style='font-size:10.0pt;
+font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><strong><span style='font-family:"Calibri",sans-serif'>Qt
+Integration Plugin</span></strong><span style='font-family:"Calibri",sans-serif'>
+(if available)</span></p>
+
+<p><img width=32 height=32 src="index_files/image001.png" alt="Manage Plugins"></p>
+
+<p><span style='font-family:"Calibri",sans-serif'>To ensure Qt is installed:</span></p>
+
+<pre><code><span style='font-family:"Calibri",sans-serif'>sudo apt install -y qtbase5-dev qtchooser qt5-qmake qttools5-dev-tools</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>qmake --version</span></code></pre>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"Calibri",sans-serif'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><span lang=EN-US>3. Configuring Git Repository for Jenkins</span></h2>
+
+<h3><span lang=EN-US>Setting Remote Repository</span></h3>
+
+<pre><code><span style='font-family:"Calibri",sans-serif'>git remote -v</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>git remote set-url origin https://github.com/new-repo.git</span></code></pre>
+
+<p><img width=32 height=32 src="index_files/image001.png" alt="Git Config"></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"Calibri",sans-serif'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><span lang=EN-US>4. Configuring Firewall and External Access</span></h2>
+
+<h3><span lang=EN-US>Allow Jenkins Through Firewall</span></h3>
+
+<pre><code><span style='font-family:"Calibri",sans-serif'>sudo ufw allow 8080/tcp</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>sudo ufw reload</span></code></pre>
+
+<h3><span lang=EN-US>Accessing Jenkins from a Remote System</span></h3>
+
+<p><span style='font-family:"Calibri",sans-serif'>Find your public IP:</span></p>
+
+<pre><code><span style='font-family:"Calibri",sans-serif'>curl ifconfig.me</span></code></pre>
+
+<p><span style='font-family:"Calibri",sans-serif'>Access Jenkins via:</span></p>
+
+<pre><code><span style='font-family:"Calibri",sans-serif'>http://&lt;your-public-ip&gt;:8080</span></code></pre>
+
+<p><img width=32 height=32 src="index_files/image001.png"
+alt="Jenkins Web Access"></p>
+
+<h3><span lang=EN-US>Configure Jenkins for External Access</span></h3>
+
+<p><span style='font-family:"Calibri",sans-serif'>Edit the Jenkins
+configuration file:</span></p>
+
+<pre><code><span style='font-family:"Calibri",sans-serif'>sudo nano /etc/default/jenkins</span></code></pre>
+
+<p><span style='font-family:"Calibri",sans-serif'>Modify the <strong><span
+style='font-family:"Calibri",sans-serif'>HTTP_HOST</span></strong> setting:</span></p>
+
+<pre><code><span style='font-family:"Calibri",sans-serif'>HTTP_HOST=0.0.0.0</span></code></pre>
+
+<p><span style='font-family:"Calibri",sans-serif'>Restart Jenkins:</span></p>
+
+<pre><code><span style='font-family:"Calibri",sans-serif'>sudo systemctl restart jenkins</span></code></pre>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"Calibri",sans-serif'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><span lang=EN-US>5. Setting Up Ngrok for External Access</span></h2>
+
+<h3><span lang=EN-US>Running Ngrok</span></h3>
+
+<pre><code><span style='font-family:"Calibri",sans-serif'>ngrok http 8080</span></code></pre>
+
+<p><span style='font-family:"Calibri",sans-serif'>Copy the <strong><span
+style='font-family:"Calibri",sans-serif'>Forwarding URL</span></strong> from
+Ngrok (e.g., </span><code inline=""><span style='font-size:10.0pt;font-family:
+"Calibri",sans-serif'>https://xyz.ngrok-free.app</span></code><span
+style='font-family:"Calibri",sans-serif'>).</span></p>
+
+<h3><span lang=EN-US>Configuring GitHub Webhook</span></h3>
+
+<p style='margin-left:36.0pt;text-indent:-18.0pt'><span style='font-family:
+"Calibri",sans-serif'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Calibri",sans-serif'>Navigate to <strong><span
+style='font-family:"Calibri",sans-serif'>GitHub &#8594; Repository &#8594;
+Settings &#8594; Webhooks</span></strong>.</span></p>
+
+<p style='margin-left:36.0pt;text-indent:-18.0pt'><span style='font-family:
+"Calibri",sans-serif'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Calibri",sans-serif'>Click <strong><span
+style='font-family:"Calibri",sans-serif'>Add Webhook</span></strong>.</span></p>
+
+<p style='margin-left:36.0pt;text-indent:-18.0pt'><span style='font-family:
+"Calibri",sans-serif'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Calibri",sans-serif'>Set the Webhook
+URL to:</span></p>
+
+<pre style='margin-left:36.0pt;text-indent:-18.0pt'><code><span
+style='font-family:"Calibri",sans-serif'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></code><code><span
+style='font-family:"Calibri",sans-serif'>https://xyz.ngrok-free.app/github-webhook/</span></code></pre>
+
+<p style='margin-left:36.0pt;text-indent:-18.0pt'><span style='font-family:
+"Calibri",sans-serif'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Calibri",sans-serif'>Choose <strong><span
+style='font-family:"Calibri",sans-serif'>application/json</span></strong> as
+the content type.</span></p>
+
+<p style='margin-left:36.0pt;text-indent:-18.0pt'><span style='font-family:
+"Calibri",sans-serif'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Calibri",sans-serif'>Select <strong><span
+style='font-family:"Calibri",sans-serif'>Just the push event</span></strong>.</span></p>
+
+<p style='margin-left:36.0pt;text-indent:-18.0pt'><span style='font-family:
+"Calibri",sans-serif'>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Calibri",sans-serif'>Click <strong><span
+style='font-family:"Calibri",sans-serif'>Add Webhook</span></strong> (Ensure
+status turns green </span><span style='font-family:"Segoe UI Emoji",sans-serif'>&#9989;</span><span
+style='font-family:"Calibri",sans-serif'>).</span></p>
+
+<p><img width=32 height=32 src="index_files/image001.png" alt="Webhook Settings"></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"Calibri",sans-serif'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><span lang=EN-US>6. Setting Up Jenkins Pipeline with GitHub</span></h2>
+
+<h3><span lang=EN-US>Creating a Jenkinsfile</span></h3>
+
+<p><span style='font-family:"Calibri",sans-serif'>Create a file named </span><code
+inline=""><span style='font-size:10.0pt;font-family:"Calibri",sans-serif'>Jenkinsfile</span></code><span
+style='font-family:"Calibri",sans-serif'> in your repository root with the
+following content:</span></p>
+
+<pre><code><span style='font-family:"Calibri",sans-serif'>pipeline {</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>    agent any</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>    stages {</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>        stage('Checkout') {</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>            steps { git 'https://github.com/anujgupta345/CPP_QT_MULTITHREADING_LINUX.git' }</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>        }</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>        stage('Build') {</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>            steps {</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>                sh 'export QTDIR=/usr/lib/qt5'</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>                sh 'export PATH=$QTDIR/bin:$PATH'</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>                sh 'qmake IPC.pro'</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>                sh 'mkdir -p build'</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>                sh 'make clean &amp;&amp; make -j$(nproc)'</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>            }</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>        }</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>        stage('Archive Artifacts') {</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>            steps { archiveArtifacts artifacts: 'build/Desktop_Qt_6_8_3-Debug/IPC', fingerprint: true }</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>        }</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>        stage('Deploy') {</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>            steps {</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>                sh 'chmod +x build/Desktop_Qt_6_8_3-Debug/IPC'</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>                sh 'mkdir -p $WORKSPACE/build'</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>                sh 'cp build/Desktop_Qt_6_8_3-Debug/IPC $WORKSPACE/build'</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>                sh 'echo &quot;Application deployed successfully!&quot;'</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>            }</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>        }</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>        stage('Run Application') {</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>            steps { sh 'nohup $WORKSPACE/build/IPC &gt;$WORKSPACE/build/app.log 2&gt;&amp;1 &amp;' }</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>        }</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>    }</span></code></pre><pre><code><span
+style='font-family:"Calibri",sans-serif'>}</span></code></pre>
+
+<p><span style='font-family:"Calibri",sans-serif'>Push the </span><code
+inline=""><span style='font-size:10.0pt;font-family:"Calibri",sans-serif'>Jenkinsfile</span></code><span
+style='font-family:"Calibri",sans-serif'> to your GitHub repository in the root
+folder.</span></p>
+
+<p><img width=32 height=32 src="index_files/image001.png" alt="Jenkins Pipeline"></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"Calibri",sans-serif'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><span lang=EN-US>7. Additional Jenkins Configuration</span></h2>
+
+<p style='margin-left:36.0pt;text-indent:-18.0pt'><span style='font-size:10.0pt;
+font-family:Symbol'> <span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Calibri",sans-serif'>Modify <strong><span
+style='font-family:"Calibri",sans-serif'>Manage Jenkins &#8594; Configure
+System</span></strong> settings as needed.</span></p>
+
+<p style='margin-left:36.0pt;text-indent:-18.0pt'><span style='font-size:10.0pt;
+font-family:Symbol'> <span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Calibri",sans-serif'>Update your </span><code
+inline=""><span style='font-size:10.0pt;font-family:"Calibri",sans-serif'>.bashrc</span></code><span
+style='font-family:"Calibri",sans-serif'> file if environment variables are
+required.</span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"Calibri",sans-serif'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><span lang=EN-US>8. Troubleshooting Steps</span></h2>
+
+<h3><span lang=EN-US>Checking Logs</span></h3>
+
+<pre><code><span style='font-family:"Calibri",sans-serif'>sudo journalctl -u jenkins -f</span></code></pre>
+
+<h3><span lang=EN-US>Verifying Jenkins is Running on Port 8080</span></h3>
+
+<pre><code><span style='font-family:"Calibri",sans-serif'>ss -tulnp | grep 8080</span></code></pre>
+
+<h3><span lang=EN-US>Checking Firewall Rules</span></h3>
+
+<pre><code><span style='font-family:"Calibri",sans-serif'>sudo ufw status</span></code></pre>
+
+<h3><span lang=EN-US>Setting Up Ngrok on Linux</span></h3>
+
+<p style='margin-left:36.0pt;text-indent:-18.0pt'><span style='font-family:
+"Calibri",sans-serif'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Calibri",sans-serif'>Run Ngrok:</span></p>
+
+<pre style='margin-left:36.0pt;text-indent:-18.0pt'><code><span
+style='font-family:"Calibri",sans-serif'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></code><code><span
+style='font-family:"Calibri",sans-serif'>ngrok http 8080</span></code></pre>
+
+<p style='margin-left:36.0pt;text-indent:-18.0pt'><span style='font-family:
+"Calibri",sans-serif'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Calibri",sans-serif'>Copy the <strong><span
+style='font-family:"Calibri",sans-serif'>Forwarding URL</span></strong> (e.g., </span><code
+inline=""><span style='font-size:10.0pt;font-family:"Calibri",sans-serif'>https://d776-2409-40f2-216c.ngrok-free.app</span></code><span
+style='font-family:"Calibri",sans-serif'>).</span></p>
+
+<p style='margin-left:36.0pt;text-indent:-18.0pt'><span style='font-family:
+"Calibri",sans-serif'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Calibri",sans-serif'>Use this URL in
+your <strong><span style='font-family:"Calibri",sans-serif'>GitHub Webhook
+Settings</span></strong>.</span></p>
+
+<p style='margin-left:36.0pt;text-indent:-18.0pt'><span style='font-family:
+"Calibri",sans-serif'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Calibri",sans-serif'>Access Jenkins
+externally without using </span><code inline=""><span style='font-size:10.0pt;
+font-family:"Calibri",sans-serif'>localhost</span></code><span
+style='font-family:"Calibri",sans-serif'>.</span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"Calibri",sans-serif'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><span lang=EN-US>Conclusion</span></h2>
+
+<p><span style='font-family:"Calibri",sans-serif'>By following this guide, you
+will have a fully functional Jenkins CI/CD pipeline integrated with GitHub. The
+setup ensures seamless automation for your Qt-based projects, including
+building, testing, and deploying applications efficiently.</span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='font-family:"Calibri",sans-serif'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h3><span lang=EN-US>Need Help?</span></h3>
+
+<p><span style='font-family:"Calibri",sans-serif'>If you encounter any issues,
+refer to Jenkins logs and firewall settings or reconfigure Ngrok. For advanced
+configurations, consult <a href="https://www.jenkins.io/doc/">Jenkins
+Documentation</a>.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri",sans-serif'><img
+border=0 width=576 height=105 id="Picture 8" src="index_files/image002.png"></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri",sans-serif'><img
+border=0 width=576 height=258 id="Picture 9" src="index_files/image003.png"></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri",sans-serif;
+color:black;border:none windowtext 1.0pt;padding:0cm'><img border=0 width=576
+height=229 id="Picture 10" src="index_files/image004.png"></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri",sans-serif;
+color:black;border:none windowtext 1.0pt;padding:0cm'><img border=0 width=576
+height=217 id="Picture 11" src="index_files/image005.png"></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri",sans-serif;
+color:black;border:none windowtext 1.0pt;padding:0cm'><img border=0 width=576
+height=418 id="Picture 12" src="index_files/image006.png"></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri",sans-serif;
+color:black;border:none windowtext 1.0pt;padding:0cm'><img border=0 width=576
+height=237 id="Picture 13" src="index_files/image007.png"></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Calibri",sans-serif;
+color:black;border:none windowtext 1.0pt;padding:0cm'><img border=0 width=576
+height=289 id="Picture 14" src="index_files/image008.png"></span></p>
+
+</div>
+
+</body>
+
+</html>
